@@ -19,7 +19,7 @@ lin_reg.fit(x, y)
 # training on polynomial regression on the whole dataset
 from sklearn.preprocessing import PolynomialFeatures
 
-poly_reg = PolynomialFeatures(degree=13)
+poly_reg = PolynomialFeatures(degree=4)
 x_poly = poly_reg.fit_transform(x)
 lin_reg2 = LinearRegression()
 lin_reg2.fit(x_poly, y)
@@ -40,3 +40,7 @@ plt.title("Truth or Bluff (Polynomial Regression)")
 plt.xlabel("Level")
 plt.ylabel("Salary")
 plt.show()
+
+
+score = lin_reg2.score(x_poly, y)
+print("The accuracy is ", score * 100, "%")
