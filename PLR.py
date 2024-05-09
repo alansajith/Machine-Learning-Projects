@@ -32,6 +32,7 @@ plt.xlabel("Level")
 plt.ylabel("Salary")
 plt.show()
 
+
 # visual representation of polynomial regression  model on the dataset
 plt.scatter(x, y, color="red")
 plt.plot(x, lin_reg2.predict(x_poly), color="blue")
